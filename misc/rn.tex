@@ -1,0 +1,123 @@
+\input{words}
+\def\build{{\sf BUILD}}
+\documentstyle{article}
+\begin{document}
+\title{Installing and Using \build}
+\author{\Rich\\
+        \Digital\\
+	\AITG\\
+        \Street\\
+	\City\\
+        \Phone\\
+        \Arpa}
+\maketitle
+
+\section{Tape Contents}
+
+The \build\ distribution tape was created using the Symbolics {\em carry-tape}
+system.  The {\tt tape:carry-list} and {\tt tape:carry-load} functions should
+be used to manipulate the tape.  The files on the tape are arranged in three
+directories:
+\begin{description}
+\item[{\tt :>robbins}]
+This directory contains a file that shows how
+a user might wish to load \build\ into a Lisp environment and a file
+that includes several \build\ {\em system models}.
+
+\item[{\tt :>robbins>build}] This directory contains the source files for
+\build.
+
+\item[{\tt :>robbins>build>test}]
+This directory contains all of the files referenced in the sample
+system models.
+\end{description}
+
+\section{Installing \build}
+
+The {\tt tape:carry-load} function should be used to install the contents of
+the \build\ distribution tape.  It is recommended that the files be installed
+in three directories, divided in the fashion that they have been placed on 
+the tape.  
+Once \build\ has been installed, several files will need to be modified
+before a working version of \build\ can be loaded into a Lisp environment.
+\begin{description}
+
+\item[\tt test-models.lisp]  All of the directory references in this file
+should be changed to point to the directory where the test models are installed.
+There are seven system models; each with one reference to modify.
+
+\item[\tt lispm-init.lisp]  This file contains (among other things) a 
+form that loads the file {\tt build.system}.  The call to {\tt load} should
+be modified to refer to the directory where {\tt build.system} is located.
+
+\item[\tt build.system]  \build\ is compiled and loaded by the Symbolics
+{\em defsystem} utility.  The file {\tt build.system}
+contains the forms used by {\tt defsystem} and the forms to set up the package
+that \build\ resides in.  Modify the value of the {\tt :pathname-default}
+keyword in the two calls to {\tt defsystem} to refer to the
+directory where the source files for \build\ are located.
+
+\end{description}
+
+\section{Loading \build\ Into The Lisp Environment}
+
+This file {\tt lispm-init.lisp} contains function calls that will
+load \build\ and import the user visible entities from the {\tt BUILD} package
+into the {\tt USER} package.  When the init file is loaded the user will be
+asked if \build\ should be loaded; there are four choices: Yes, No, Recompile,
+and Quiet.
+Yes and No do the obvious things.  Quiet is just like Yes except that the system
+will not prompt the user again and just assume that the answer to all further
+questions is Yes.  Recompile causes all of \build\ to be recompiled even if
+the compilation is not really necessary.
+The user will then be asked if the \build\ environment definitions should
+be loaded;  these (or equivalent) definitions must be loaded if \build\
+is to be run.
+
+\section{Running \build}
+
+Once \build\ has been loaded into the environment, the following macros and
+functions are available:
+\begin{itemize}
+\item {\tt defmodel}
+\item {\tt build-request}
+\item {\tt define-module-type}
+\item {\tt define-process-type}
+\item {\tt define-request-handler}
+\item {\tt define-reference-handler}
+\item {\tt define-reference}
+\item {\tt access}
+\item {\tt access*}
+\item {\tt access+}
+\item {\tt process-request}
+\item {\tt touch}
+\item {\tt forget}
+\end{itemize}
+Except for {\tt touch} and {\tt forget}, the functions and macros listed
+above are documented in the \build\ technical report (forthcoming) and
+the \build\ thesis paper.  In addition to the two \build\ papers, examples
+of how several of the functions are to be used may be found in the files
+{\tt test-models.lisp, standard.lisp,} and {\tt c-standard.lisp}.
+
+The {\tt touch} function can be used in order to cause the creation
+date attribute of a file to be updated to the present time without
+actually manipulating the file.  This is useful for testing \build\ and
+using the sample models.
+
+While \build\ is running it maintains a table of information about the
+modules that it caused to be created; the {\tt forget} function can
+be used in order to cause \build\ to forget that some module was created.
+Like {\tt touch}, this function is useful when testing \build\ and using the
+sample models.
+
+When \build\ is invoked it places a form on the current {\em logout list\/}
+that causes the contents of the \build\ module table to be stored in a file
+when the current user logs out.  \build\ will automatically load this
+file the next time the user runs \build.  The data file allows \build\
+to remember exactly which modules were used by the processes that it invoked.
+
+Note: The \build\ papers refer to {\em g-nodes} while the source code refers to
+{\em m-nodes}.  These two names are synonymous.  The term {\em m-node} has been
+replaced with the term {\rm g-node,} but the prototype system has not been
+updated to reflect the change.
+\end{document}

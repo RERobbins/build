@@ -1,0 +1,440 @@
+A Glossary of  Terms for System Modelling which includes the
+problem of version control and consistent compilation.
+By Daniel Conde 
+	ARPA address: Conde.pa@Xerox.ARPA
+Last edited by: Conde on   14-Mar-85 13:13:21.
+CR Catagories: 
+D.2.2 [Software Engineering]:  Tools and Techniques -  Modules and Interfaces 
+D.2.7 [Software Engineering]:  Distribution and Maintanance -  Version Control 
+D.2.9 [Software Engineering]:  Management - Software Configuration Management
+
+Key words and Phrases: Version control, release process, software
+management, automatic compilation, modules, system models.
+
+Things to do:
+ a) Merge common definitions
+ b) Look for incorrect citing format
+ c) Clean up inconsistent 1)'s and a)'s and commas. 
+
+This version still lacks terms as defined in:
+ 1) Cooprider's thesis (major)
+ 2) PIE
+ 3) InterLisp terms
+ 4) Simonyi's stuff
+
+Disclaimer: This is also not an offical Xerox document.  This list
+includes a fair number of Xerox terms and points to some old internal
+memos since it was originally an internal document. I believe they are
+not available to outsiders. Also many of the terms are biased toward
+Xerox definitions, so please bear with me. Please send me new terms
+that you want to add, or corrections you want to make.
+  
+Please send comments to me.
+
+This is a list of terms that seem relevant to system modelling. I have
+not collected all the terms that seem to fit into the CR catagories
+listed above, however you may see a bias to internal Xerox references.
+I have included a reference section at the end for your convenience.
+The refences are a superset of those actually used in the glossary.
+
+Key:
+
+1) Vague terms have the definition preceeded by "???".  I won't define
+words that a) have well known definitions (such as "source file") and
+b) too specific (like keywords in C/Mesa). I will define a) common
+words that are misused, b) not agreed upon, etc. since they are often
+the cause of misunderstanding and confusion. Getting those KEY terms
+clarified was the original intent of this glossary until I got carried
+away.  
+
+2) Beware of circular references.
+
+3) When I get lazy or the def is too long or complex, I'll just cite
+commonly available references.
+
+4) I'm also hesitant to include too many terms used in outside
+commercial systems since new words are frequently coined (perhaps to
+distinguish themselves and their products). But I've included some
+that were noted in Eric's thesis and those that seems interesting in
+the recent Red book. I'll refrain from including the new words coined
+in various product brochures.  I may tag commercial buzzwords with a
+'+' or something like that. This is really hard to do since
+"important" systems like "Make" is now commercial, and it's a really
+snobbish attitude to take.  Please trust my judgement.  I'll just
+include names of big systems as a lead, but won't for the most part
+define everything THEY define. 
+
+5) When defs don't have references, they are MY definitions, so get
+those salt shakers out. There may be terms without references where it
+should have.  Please tell me.
+
+Glossary of Terms.
+Words set in bold face are defined elsewhere in the Glossary.
+
+Abstract types: In the standard sense are defined by the properties of
+their attributes, whether these are procedures, functions fields, or
+whatever. [Lampson 76] ALS: + Ada Language System developed by SofTech
+to meet Stoneman requirements.  Attributes of abstract or concrete
+types: All properties that we want to be able to talk about
+individually. [Lampson 76]
+
+Automatic Compilation: Doing dependency analysis to get a consistent
+software system by issuing compilation and translation commands in the
+proper order to resolve any dependency conflicts, etc.
+
+Compilation information: Identification of all files needed to compile
+the system. Needs dependency analysis. [Schmidt 82, 3]
+
+Compile-edit-debug-release cycle: What you do every day, and the
+original system modeller was designed to make this cycle as error free
+and "fast" as possible with as much automation and parameterization.
+[Schmidt 82]
+
+Complete Release: 1) A release is complete iff every object file
+needed to compile every source file is among the files being released.
+[Schmidt, 82 4]
+
+Compool: + 1) A database of Pascal modules used at Intermetrics
+[Avakian, 1982]
+
+Compositions: See System Compositions.
+
+Concrete types: and their values are defined by Mesa type decls and by
+the actual code that operates on them. Consider them to be
+representations or impls of abstract types [Lampson, 76]
+
+Configuration: 1) A set of modules that comprise a "system" [Mitchell,
+79] 2) Set of module bodies. [Estublier 84 150] . 2) Collection of
+instances of modules which make up a complete running program.
+[Lampson 76 1]
+
+Consistent compilation: To incorporate all the effects of a change on
+a configuration and to be able to detect or correct any erroneous
+attempts to construct a configuration from incompatible modules or add
+an incompatible version of a mmodule to an existing configuration
+[Lampson, 76 1]
+
+Consistent Release: 1) A release is consistent iff one version of each
+package is being released and every other package depends on the
+version being released. [Schmidt 82]
+
+Deltas: Descriptions of incremental changes between unit revisions.
+[Ivie, 77; Glasser, 78] Often based on [Heckel, 78] Dependency
+Analysis: compute which files need to be compiled, translated, loaded,
+etc.
+
+Dependency Graph: A graph constructed by listing all inter module
+references or dependencies until one gets to thosewhich have no module
+references.
+
+Derivation Recursion: Recursive dependencies of the compiler or other
+program transformers on their own sources and the compiler used for
+its derivation. [Ayers, 78] How can the compiler always have compiled
+itself? Where's the compielr that compiled thee compiled...
+
+Derived objects: An object that can be recreated from fundamental
+objects. Sources are considered to be fundamental in the normal mode
+of operation.
+
+Description File: See DF.
+
+Desoto: An experiment in consistent compilation to avoid unnecessary
+recompilations by analyzing the symbol table.  [Malloy, 1977]
+
+Development-Integration-Release: Three parts of a release used in
+Xerox and presumably other places. Development is a time of
+unconstrained program development where new function is added and bugs
+in the previous release are fixed. Integration allows implementors who
+must coexist in the running system to work out any bugs that surface
+when more than one package is changed. The final release phase (which
+may in turn be multi phased) move the files and update databases.
+[Schmidt 82]
+
+DF Files: 1) A collection of programs for describing the files needed
+to build a complicated system, for automatically retrieving these
+files from remote file servers to the local disk and storing them
+back. Unlike more grand and glorious system models to come, DF files
+primarily addresses the problems engendered by our current feudal
+collection of files systems. The letters "DF" are an acronym for D
+escription F iles, which suggests that the phrase "DF Files" is
+redundant. [PARC Glossary of Terms] 2) A list of file names, fully
+qualified with their network location and create date. [Lewis, ??1]
+
+Distribution: "???"  Making available a specified set of programs
+(bits) to users.
+
+DSEE: + DOMAIN Software Engineering Environment. Apollo Computer's
+distributed software development environment. [Leblang, 84]
+
+Exporters: Implementors, or implementations of interfaces. [Schmidt,
+82 13]
+
+Exports: See Imports
+
+Family of interfaces: Set of related interfaces. [Estublier, 84 150]
+
+Family of modules: Modules related to each other by representing
+different versions of a system. See Version (3). [Tichy, 80]
+
+File information: 1) Version and location of a file. Must be updated
+as the real files change if there is an external database. [Schmidt,
+82 3]
+
+Fundamental objects: An object that cannot be derived. See Derived
+objects.
+
+Gandalf: An integrated software development environment developed at
+CMU for the GC (Gandalf C) language. See [Habermann, 82]
+
+Immutable object: "???" An immutable object has a unique name
+(unique-id) and that 2) the conents of the object never change once
+the object is created. Objects are immutable but can be destroyed by
+deletion. [Schmidt, 82 49]
+
+Implementation: The modules of a system that supply the same
+facilities specified by a definition or a specification. For example,
+ImplXA and ImplXB may export the same procedures defined in DefsX.
+[Schmidt, 82] 2) Provider of resources described by an interface.
+
+Importers:  Clients of interfaces [Schmidt, 82  13]
+
+Imports: "???" 1) An interface instance is created by an
+implementation module "EXPORT"ing the interface. The procedures, etc.
+exported by the implementor can be used when another module IMPORTs
+the interface (Actually, it imports the interface record). [Schmidt,
+82a]
+
+IncludeChecker: A tool used in Xerox SDD for verifying the consistency
+of a set of modules and issues proper compilation orders for
+consistent compilation. [Lewis 84]
+
+Instantiations: "???" A oft misused buzzword.  1) In the Gandalf
+sense, refers to a "System Generation" that supplies a new executable
+system from an implementation or composisition selected. Requires
+compiles, links and loads of the consituent modules.
+
+Integration service: A team of programmer whose only duty is to
+perform integrations of other programmer's software, fix
+incompatibilities between modules when possible. [Harslem, 82]
+
+Interface information: 1) Occurs in languages that require explicit
+delineation of interconnections between modules, we must be able to
+express these connections. [Schmidt 82 3]
+
+Interface Instance: 1) A record containing values of items declared in
+an interface type, such as pointers to the code for precedures, etc.
+Some implementation module has to provide these values. [Schmidt, 82a]
+
+Interface Record Paramterization: Occurs when two different
+implementations for the same interface is used in the Mesa binder.
+
+Interface Records: See Interface Instance
+
+Interface Type Parameterization: Occurs when two different interfaces
+versions are defined to define the same interface.
+
+Interface Type: 1) A specific version of a definitions module defining
+the names and types of procedures, etc. declared in the definitions
+module. An interface type does not specify any values for the objects
+it defines, so no association between procedure declaration in the
+definitions modules and their code is possible. Standing alone, a .Bcd
+for a definitions file is an interface type. [Schmidt, 82a]
+
+Interface: "???" 1) Informally used for definitions modules. [Schmidt,
+82a] 2) Description of the resources provided by the system.
+[Estublier, 84]
+
+INTERCOL: Language used to describe module interconnections. [Tichy,
+80]
+
+Librarian: "???" 1) A service used in one part of Xerox system
+development to enforce checkout/checkin discipline and to aid file
+movements and locations.[Horsley, 79; Prager83]
+
+Make: Stu Feldman's automatic compilation program, loved by all UNIX
+progrmmers. It is driven by a system description which is an acyclic
+dependency graph. It works fine for simple things. [Feldman, 79]
+
+Modelules: A model of a module. A component model in a larger system
+model. [Lampson, 80]
+
+Module identifier: Allows distinguishing a module from every other
+module in the universe.  For example, use a 64-bit number which is
+accepted by many computer scientists as equivalent to infinity.
+[Lampson, 76]
+
+Module name: "???" 1) Each module has one or more module names.
+[Schmidt, 82a]
+
+Modulels: A module in a model. See Modelules
+
+Modules: "???"  Important but the vaguest.  1) In Mesa, is the basic
+unit of compilation and also the smallest-self contained executable
+program unit. Tehreare two kinds, Definitions and Implementations.
+[Mitchell, 79 Sec. 7-1] 2) Complete descriptions of a software system
+that is similar to a blue print or a schematic which combines in one
+place a) information about the versions of the files needed and hints
+about their locations, b) additional information needed to compile the
+system, and c) information about interconnections betwen modules, such
+as which procedures are used and where they are defined. [Schmidt, 82
+1] 3) Also known as Classes [Dahl 68; BrinchHansen, 75] Forms [Wulf,
+76], Clusters [Liskov, 77], Modules [Wirth. 77; Lampson, 77; Mitchell,
+79] and Packages [Ichbia 79] This list is from [Tichy, 80]. He
+describes modules as "A Logical self contained unit that may be
+developed independently.
+
+Noticing Units: Word borrowed from InterLisp (tm), is the act of
+updating a model when its components units change. [Lampson, 80]
+
+Package: Groups of logically related files, such as the source and
+object files for a program they are developing. A DF corresponds to
+this. [Schmidt 82 21]
+
+PIE: An extension to Smalltalk (tm) which is a network database of
+Smalltalk objects [Goldstein, 80]
+
+Polymorphism: "???" Only as it applies to Cedar and Systems Modelling.
+In Cedar module interconnection facilities, the specification can
+compute a value that is later used as the type for another value. In
+other words, types are first class objects. [Schmidt, 82 50]
+
+Programming-in-the-Large: 1) Doing it where the unit of discourse is
+the module.  as defined in [Schmidt, 82] p.3 [DeRemer, 76]
+
+Programming-in-the-Small: 1) Doing it where the unit of discourse
+include scalar variables, stmts, expr, and such. [DeRemer, 76]
+
+Propagation of Interface changes: Changes of interfaces which cause
+inconsistencies could be analyzed in the overall system to a)
+determine which components are affected and b) to initiate
+notification of the programmers and to take proper corrective
+measures. [Tichy, 80]
+
+RCS: Revision Control System, A software tools that helps in managing
+multiple revisions of text and automates the storing, retrieval,
+logging, identification and merging or revisions and provides access
+control. [Tichy, 82]
+
+Release Master: Person making the release. Simple, huh? Takes on
+responsibilities of getting developers to fix bugs and inconsitencies
+as they appear during a release, and release consistency checks.
+
+Release Process: What the release master does.
+
+Release: "???" 1) Getting a fixed set of bits to the users. 2) A
+working set of software saved in a safe location. [Schmidt, 82
+Abstract]
+
+Representations: Actual collections of bits representing values of
+specific concrete types.
+
+Revision: 1) A modification of a previously existing item, such as
+program source. There may be many serial revisions of acomponent,
+where one may be identified by an explicit time stamp.  Frequently,
+one of the revision is designated as a "standard" revision that is
+used when no time stamp is specified. For example, that may be the
+most recent revision.  [Tichy, 82] Frequently, the term version is
+used interchangably. When the term revision is used in, the author is
+likely to use the term version to mean text that is a transformation
+cf. Version.
+
+SCCS Number: Deltas or changes in SCCS are identified by a release and
+level number. See also Deltas.
+
+SCCS: Source Code Control System manages versions of C source programs
+enforcing checkin/check out access to versions. [Ivie, 77]
+
+SDL: A proposed system description language. [Karlton, 1978; Ayers,
+78]
+
+Slists: See SMF.
+
+SMF: Software Manufacturing Facility. (I supose in the vein of the
+Software Factory??) Tools that unified Make and SCCS at Bell Labs
+[Cristofor, 80] augmented with Slists which list desired versions of
+files by their SCCS number.
+
+SML: A System Modellong Language used to write systems models at Xerox
+PARC's CSL.  [Schmidt, 82, 82a]
+
+Software Configuration Management:  ??? Who knows?
+
+Sofware Management: 1) Motherhood - Hard to define. 2) Control to keep
+a system in a well defined state by allowing modificaation that are
+meaningful in a given state, avoiding unauthorized orconflicting
+modifications. [Tichy 80] from def of version control management.
+
+Stoneman: Requirements for Ada (tm) Programming Support Environments
+(commonly called APSE) [Stoneman, 80]
+
+SVCE: System Version Control Environment combines Gandalf's system
+composition language with version control over multiple versions of
+the same component. Note use of CMU terminology.
+
+System Composisitions: Groupings of implementations together and to
+specify which module to use when several modules (versions (CMU))
+provide the same facilities (specifications).  Multiple ways of
+specifying and grouping versions (CMU) and revisions allow virtually
+any level of binding.[Habermann, 80]
+
+System Modeller: "???" 1) A program that automates development of
+software in the Cedar programming environment. The System modeller is
+notified of new versions of software as they are created by the
+editor, and automatically recompiles and loads new versions of
+software. The modeller allows the user to mainaint all three kinds of
+information, stored in system models that describe particular versions
+of a system. The system modeller is a complete software development
+system that will replace use of the description files as the primary
+method of producing software in Cedar (hmmm...) [Schmidt, 82 1]
+
+System Models: "???"  Important 1) Descriptions systems in terms of
+ther interfaces (DEFINITIONS modules) and their implementations
+(PROGRAM modules). In these models, the programmer a) specifies how
+his modules interconnect, b) instructs the modeller how to compile his
+system, and c) Identifies files by unique version numbers. [Lampson
+79, 80] 2) Descriptions of the components that comprise an
+application, the "build" dependencies inherent in each component, and
+the build rules that must be applied to a component in order to
+rederive an object module from source. [Leblang, 84 106]
+
+Units: "???" A piece of source text with no free identifiers but
+perhaps with formal parameters, thus can stand alone. A unit is
+immutable; its contents never change. Existing units can be used to
+create new units. This is the process of editing. [Lampson, 80]
+
+Unnecessary compile: The derived object is functionally identical to
+the any previously existing version. Should be idempotent if no one
+depends on it.
+
+Version Control: "???"1) Keeping track of versions and revisions in
+both senses for files, systems, documets, etc. Often the changes are
+noted in databases, file (DF), paper, etc. Mistakes may or may not be
+caught by the system. For example, the Mesa run time system will flag
+interface mismatches, other don't (ha ha). Whether or not the problem
+of rebuilding is a part of version control is arguable.
+
+Version: Important 1) A different edit of a specific file (Xerox). 2)
+A different implementation of a file in a family of similar files
+(CMU) For example, parallel versions may be in development, which are
+different implementations of the same specification. Imagine one
+definitions file with multiple implementations for experimenting with
+the time/space/efficiency tradeoffs. Each one of these implementations
+is a verion.  Fine point: In Xerox, we do not frequently use multiple
+implementations, thus the word version refers to the CMU meaning of
+revision.  Frequently used is a 2-level version-revision id scheme.
+[Cristofor, 80] [Kaiser, 82] 3) A module family has three orthoginal
+attributes: a) Implementations (source programs) b) Revisions
+(modification of previous sources) c) Derived versions (constructed of
+revisions of implementations) [Tichy, 80]
+
+Version Control: Coordination of the creation and change of course
+program versions and implemetation of system generation in a multi
+version, multi configuration environment to ensure that a system
+remains in a well defined state by permitting operations that are
+meaningful at a given state. See Version selection. [Tichy, 80]
+
+Version selection: With a set of rules and inter module connection
+description, determine which versions of which components should be
+combined to create a particular version of a particular configuration.
+[Tichy, 80]
+  

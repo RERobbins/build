@@ -1,0 +1,279 @@
+[Allman, 81] Eric Allman, An Introduction to the Source Code Control
+System, Project Ingres, UC Berkeley, September 1981.
+
+[Avakian, 82] Arra Avakian, "The Design of an Integrated Support
+Software System", Proceedings of the SIGPLAN 82 Symposium on Compiler
+Construction, p. 308, June 1982
+
+[Ayers, 78] Bob Ayers, Consistent Compilation Working Group Report,
+Internal Memorandum, Xerox Business Systems, Systems Development
+Division, December 1978.
+
+[Belady, 76] L.A. Belady, M.M. Lehman, "A Model for Large Program
+Developement", IBM Systems Journal, Vol 15 No. 3 p.225 1976.
+
+[Belady, 78] L.A. Belady, Large Software Systems, Technical Report
+RC-6966, IBM Thomas J. Watson Research Center, January 1978.
+
+[Belady, 79] L.A. Belady, "The Characteristics of Large Systems",
+Research Directions in Software Engineering, p. 106. M.I.T. Press
+1979.
+
+[Bell Labs, 81] Bell Labs, "Source Code Control System User's Guide",
+UNIX System III Programmer's Manual, October 1981. AT&T Information
+Systems.
+
+[Bianchi, 76] M. H. Bianchi, J. L. Wood. "A User's Viewpoint on the
+Programmer's Workbench", Proceedings of the 2nd Conference on Software
+Engineering. p. 193 ACM and IEEE 1976.
+
+[BrinchHansen, 75] Brinch Hansen, Per, Concurrent Pascal Report,
+Technical Report, Information Science, California Institute of
+Technology, 1975
+
+[Cooprider, 79] Lee Cooprider, The Representation of Families of
+Software Systems, CMU-CS-79-116, April 1979
+
+[Cristofor, 80] E. Cristofor, T. Wendt, B. Wonsiewicz, "Source Control
++ Tools = Stable Systems", Proceedings of Compsac 80, IEEE October
+1980.
+
+[Dahl, 68] Ole-Johan Dahl et al, Simula 67 Common Base Language,
+Technical Report, Norwegian Computing Center, Oslo, 1968
+
+[DEC, 82] Digital Equipment Corporation, CMS/MMS: Code/Module
+Management System Manual, DEC, 982
+
+[Deutsch, 80] L.  Peter Deutsch, Ed Taft, Requirements for an
+Experimental Programming Environment, Xerox PARC CSL-80-10, June 1980.
+
+[DeRemer, 76] Frank DeRemer, H. Kron. "Programming-in-the-Large Versus
+Programming-in-the-Small", IEEE Trans actions on Software Engineering,
+Vol 2. No. 2 pp. 80-86., June 1976
+
+[Erickson, 83] V.B. Erickson, "Build- A Software Construction Tool",
+AT&T Bell Laboratories Technical Journal, Vol. 63, No. 6, August 1983
+
+[Estublier, 84] J. Estublier, "Preliminary Experience with a
+configuration Control System", Proceedings of the SIGSOFT/SIGPLAN
+Software Engineering Symposium on Practical Software Development
+Environments, ACM May 1984. p. 149.
+
+[Feldman, 79] Stuart I.  Feldman, "Make - A Program for Maintaining
+Computer Programs", Software, Practice and Experience, Vol 9, No 4,
+pp. 255-265, April 1979.
+
+[Glasser, 78] Alan L. Glasser, "The Evolution of a Source Code Control
+System", Proceedings of Software Quality and Assurance Workshop,
+Software Engineering Notes, Vol 3 no 5., p. 122. November 1978.
+
+[Goldstein, 80] Ira Goldstein, Danny Bobrow, A Layered Approach to
+Sofware Design, Xerox PARC CSL-80-5, December 1980.
+
+[Goldstein, 80a] Ira Goldstein, Danny Bobrow, "Descriptions for a
+Programming Environment", Proceedings of the First Annual Conference
+of the National Assocation of Artificial Intelligence, Stanford
+California, August 1980.
+
+[Goldstein, 80b] Ira Goldstein, Danny Bobrow, "Representing Design
+Alternatives", Proceedings of the Artificial Intelligence and
+Simulation of Behaviour Conference, Amsterdam, July 1980.
+
+[Habermann, 76] Nico A. Habermann, Lawrence Flon, Lee. W. Cooprider.,
+"Modularization and Hierarchy in a Family of Operating Systems", CACM
+Vol 19. No. 5. p. 266 May 1976.
+
+[Habermann, 79] Nico Habermann, et al., "Tools for Software
+Construction", Proceedings of the Software Tools Workshop, Boulder
+Colorado, May 1979.
+
+[Habermann, 79b] Nico A. Habermann, A Software Development Control
+System, Technical Report, CMU., 1979.
+
+[Habermann, 80] Nico Habermann, System Decompositions and Version
+Control for Ada, CMU, May 1980.
+
+[Habermann, 82] Nico Habermann, The Second Compendium of Gandalf
+Documentation, CMU, May 1982.
+
+[Harslem, 82] Eric Harslem, "A Retrospective on the Development of
+Star", Proceedings of the 6th International Conference on Software
+Engineering, Tokyo, Japan. September 1982.
+
+[Heckel, 78] P. Heckel, "A Technique for Isolating Differences Between
+Files", CACM April 1978.
+
+[Horsley, 79] Thomas Horsley, "Pilot: A Software Engineering Case
+Study", Proceedings of the 4th International Conference on Software
+Engineering, 1979 p.94.
+
+[Ichbiah, 79] Jean D. Ichbiah, et al., "Preliminary ADA Reference
+Manual", SIGPLAN Notices, Vol. 14., No.  6 Part A., ACM June 1979.
+
+[Ivie, 77] E. Ivie, "The Programmer's Workbench - A Machine for
+Software Development", CACM Vol 20., No 10 p. 746, October 1977.
+
+[Kaiser, 82] G. Kaiser, Nico Habermann, "A Description of the Correct
+Version Control Supported by the Gandalf Environment", Second
+Compendium of Gandalf Documentation, CMU, 1982
+
+[Karlton, 1978] Phil Karlton, Consistent Compilation Working Group
+Memos, Xerox SDD/SD, April 1978. File: ConsistemCompilation.memo[1-20]
+
+[Lampson, 76] Butler W. Lampson, Consistent Compilation, Xerox PARC
+CSL Inter-Office Memorandum, June 1976. File: ConComp.memo
+
+[Lampson, 77] Butler W. Lampson, James Horning, Ralph London, James
+London, Gerald Popek, "Report of the Progrmming Language Euclid",
+SIGPLAN Notices, Vol. 12. No. 2 p. 1 February 1977 (See also a revised
+report from PARC CSL 81-12)
+
+[Lampson, 79] Butler W. Lampson, Models for Mesa Systems, Xerox PARC
+CSL Inter-Office Memorandum, January 1979. File: ModelMemo
+
+[Lampson, 79a] Butler W. Lampson, Models for Programs, Xerox PARC
+Forum, May 1979.
+
+[Lampson, 80] Butler W. Lampson, System Modelling, Inter-Office
+Memorandum, Xerox PARC CSL Inter- Office Memorandum, May 1980.  File:
+ModelsNow.
+
+[Lampson, 83] Butler W. Lampson, Eric Schimdt , "Organizing Software
+In a Distributed Environment", SIGPLAN Notices, ACM, June 1983.
+
+[Lampson, 83a] Butler W. Lampson, Eric Schimdt, "Practical Use of a
+Polymorphic Applicative Language", 10th POPL Conference, ACM, January
+1983.
+
+[Lauer, 79] Hugh Lauer, Ed Satterthwaite, "Impact of Memo on System
+Design", 4th International Conference on Software Engineering, p.
+174-182. IEEE, Septermber 1979
+
+[Leblang, 84] David Leblang, "Computer Aided Sofware Engineering in a
+Distributed Environment", Proceedings of the SIGSOFT/SIGPLAN Software
+Engineering Symposium on Practical Software Development Environments,
+ACM May 1984. p. 104.
+
+[Levin, 82] Roy Levin, Cedar Releases: Policies and Procedures, Xerox
+PARC CSL Inter-Office Memorandum, May 1982.
+
+[Lewis, 84] Brian Lewis, "IncludeChecker", Xerox OSD Mesa User's
+Guide. June 1984
+
+[Lewis, ??] Brian Lewis, "Experience with a System for Controlling
+Software Versions in a Distributed Environment", Xerox. Proceedings of
+the Symposium on Application and Assessment of Automated Tools for
+Software Development in Nov. 1983 from IEEE Press catalog number
+83CH1936-4. also IEEE Computer Society order 504.  A Reprint number is
+CH1936-4/83/0000-0210 $1.00
+
+[Linton, 1984] Mark Linton, "Implementing Relational Views of
+Programss", Proceedings of the SIGSOFT/SIGPLAN Software Engineering
+Symposium on Practical Software Development Environments, ACM May
+1984. pp. 132
+
+[Liskov, 77] Barbara H. Liskov, Alan Snyder, Russel Atkinson, and
+Craig Schaffert, "Abstraction Mechanisms in CLU", CACM , 20(8) p. 564
+August 1977
+
+[Malloy, 1977] Tom Malloy, Recompilation Module, Inter-Office
+Memorandum, Xerox SDD/SD, July 1977.  File: DeSoto.memo
+
+[Minsky, 84] N. Minsky, "The Darwin Software-Evolution Environment",
+Proceedings of the SIGSOFT/SIGPLAN Software Engineering Symposium on
+Practical Software Development Environments, ACM May 1984.
+
+[Mitchell, 79] James G. Mitchell, William Maybury, Richard Sweet, Jim
+Herz, The Mesa Language Manual, Xerox OSD June 1984.
+
+[Nicklin, 84] Peter Nicklin, "MKMF - Makefile Editor", UNIX
+Programmer's Manual 4.2 BSD.
+
+[PARC Glossary of Terms] Xerox PARC CSL
+
+[Parnas, 72] David L. Parnas, "On the Criteria To Be Used In
+Decomposing Systems into Modules", CACM, Vol. 15. No. 2 p. 1053
+December 1972.
+
+[Parnas, 75] David L. Parnas, Use of the Concept of Transparency in
+the Design of Hierarchically Structured Systems, Technical Report,
+CMU, 1972.
+
+[Powell, 82] Mike Powell, Mark Linton The OMEGA Programming System,
+1982
+
+[Powell, 83] Mike Powell, Mark Linton, "A Database Model of
+Debugging", Proceedingsof the SIGSoft/SIGPLAN Software Enginerring
+Symposium on High Level Debugging, ACM March 1983. pp. 365-375
+
+[Prager, 1983] J.M. Prager, "The Project Automated Librarian", IBM
+Systems Journal , Vol 22, No.3 p. 214, 1983.
+
+[Rochkind, 75] Marc Rochkind, "The Source Code Control System", IEEE
+Transactions on SoftwareEngineering. Vol 1. No 4, pp. 364-370,
+December 1975.
+
+[Rowland, 82] B.R. Rowland, "Software Development System", The Bell
+System Technical Journal, Vol.62, No. 1, January 1983
+
+[Satterthwaite, 78] Ed Satterthwaite, Inter-Office Memorandum, Xerox
+SDD/SD, April 1978. File: CCompItems.bravo
+
+[Schimdt, 82] Eric E. Schmidt, Controlling Large Sofware Development
+In a Distributed Environment, Xerox PARC CSL-82-7, December 1982.
+
+[Schimdt, 82a] Eric E. Schmidt, Cedar System Modelling Reference
+Manual, Xerox PARC CSL, January 1982.
+
+[Spreitzer, 84] Spreitzer, MakeDo, Xerox Cedar Documentation Version
+4.2, 1984.
+
+[Stoneman, 80] Department of Defense, "Stoneman: Requirements for Ada
+Programming Support Environments (APSE). Feb. 1980.
+
+[Teitelbaum, 81] T. Teitelbaum, "The Cornell Program Synthesizer: A
+Syntax Directed Programming Environment", CACM Vol 24. No 9. pp 563,
+September 1981.
+
+[Teitelman, 75] Warren Teitelman, INTERLISP Reference Manual, Xerox
+PARC, December 1975.
+
+[Teitelman, 81] Warren Teitelman, "The INTERLISP Programming
+Environment", IEEE Computer, April 1981.
+
+[Teitelman, 83] Warren Teitelman, "Cedar: An Interactive Programming
+Environment for a Compiler" Oriented Language", LANL/LLNL Conference
+on Work Stations in Support of Large Scale Computing, March 1983.
+
+[Teitelman, 84] Warren Teitelman, "A Tour Through Cedar", IEEE
+Sofware, April 1984.
+
+[Thall, 83] R. Thall, "Large Scale Software Development with the Ada
+Language System", Proceedings of ACM Computer Science Conference, Feb
+1983.
+
+[Tichy, 80] Walter Tichy, Software Development Control Based on System
+Structure Description, PhD.  Thesis CMU-CS-80-120 January 1980.
+
+[Tichy, 82] Walter Tichy, "Design, Implementation and Evaluation of a
+Revision Control System", Proceedings of the 6th International
+Conference on Software Engineering, ACM-IEEE, Tokyo.  Septermber 1982
+
+[Tichy, 82a] Walter Tichy, "A Data Model for Programming Support
+Environments and its Application", IFIP WG. 8.1 workshop on Automated
+Development, New Orleans. January 1982
+
+[Tichy, 82b] Walter Tichy, "RCS Manual", UNIX Programmer's Manual, 4.2
+BSD. U.C. Berkeley.
+
+[Walden, 83] Kim Walden, "Automatic Generation of Make Dependencies",
+Software, Practice and Experience, Vol 14, No. 6, June 1984.
+
+[Wirth, 77] Wirth, Niklaus "Modula: A Language for Modular
+Programming", Software - Practice and Experience, Vol . 7, No .1, p. 3
+1977
+
+[Wulf, 76] William A. Wulf, Ralph L. London, and Mary Shaw "An
+Introduction to the Construction and Verification of Alphard
+Programs", CACM SE-2(4) p.253, Dec. 1976.
+    

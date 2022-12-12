@@ -1,0 +1,61 @@
+Sankar,
+
+This message contains a rough outline of the files that I will
+try to mail to you when you acknowledge receipt of this message.
+
+ 
+Directory LISPW$:[ROBBINS]
+
+LISPMINI.LSP       ; Here is my lisp init file.  It shows how I set up
+		   ; the package system as well as how I compiled and
+		   ; loaded BUILD.
+
+Directory LISPW$:[ROBBINS.PERSONAL.BUILD.CODE]
+
+BUILD.SYS          ; This file contains the DEFSYSTEM description for BUILD.
+		   ; It is referenced by my lisp init file (see above).
+
+TESTMODS.LSP  	   ; Here are some BUILD models I've played with (see below).
+
+BUILD.LSP          ; These are the source files for BUILD.  They are
+CSTANDARD.LSP      ; referenced in BUILD.SYS (see above).
+MNODE.LSP          
+MODEL.LSP          
+MODTYPE.LSP        
+MODULE.LSP         
+NODEPRIM.LSP       
+PNODE.LSP          
+PROCTYPE.LSP       
+STANDARD.LSP       
+SYSTAB.LSP         
+UTILITIES.LSP      
+
+Directory LISPW$:[ROBBINS.PERSONAL.BUILD.TEST]
+
+A.C		; These files are referenced in TESTMODS.LSP
+A.LISP		; They are just around to use the sample models defined there.
+A.SCRIPT
+B.C
+B.LISP
+C.C
+C.LISP
+CIRCULAR-A.C
+CIRCULAR-A.LISP
+CIRCULAR-B.C
+CIRCULAR-B.LISP
+CODEGEN.C
+CODEGEN.LISP
+D.C
+D.LISP
+DEFINITIONS.C
+DEFINITIONS.LISP
+E.C
+E.LISP
+F.C
+F.LISP
+LIBRARY.LISP
+LIBRARY.O
+PARSER.LISP
+PARSER.Y
+SIMPLE.C
+SIMPLE.LISP

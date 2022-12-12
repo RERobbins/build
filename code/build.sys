@@ -1,0 +1,38 @@
+;;; -*- Mode: LISP; Fonts: MEDFNB; Package: (BUILD :COLON-MODE :EXTERNAL)-*-
+;;;
+;;;        SYSTEM DESCRIPTION FOR BUILD
+;;;
+
+(export '(defmodel build-request define-module-type define-process-type
+          define-request-handler define-reference-handler define-reference
+	  access access* access+ process-request touch forget))
+
+(defpackage BUILD-TEST (:use global build))
+
+(defsystem build
+  (:name "BUILD")
+  (:pathname-default "[ROBBINS.PERSONAL.BUILD.CODE]")
+  (:module global ("UTILITIES" "SYSTAB"))
+  (:module types ("MODTYPE" "PROCTYPE"))
+  (:module nodes ("MNODE" "PNODE"))
+  (:module module "MODULE")
+  (:module node-primitives "NODEPRIM")
+  (:module model "MODEL")
+  (:module build "BUILD")
+  (:module type-defs "STANDARD")
+  (:compile-load global)
+  (:compile-load-init types (global) (:fasload global))
+  (:compile-load-init nodes (global) (:fasload global))
+  (:compile-load-init module (global) (:fasload global))
+  (:compile-load-init node-primitives (global) (:fasload global))
+  (:compile-load-init model (global) (:fasload global))
+  (:compile-load-init build (global) (:fasload global))
+  (:compile-load-init type-defs
+   (global types node-primitives)
+   (:fasload global types node-primitives)))
+
+(defsystem build-definitions
+  (:name "DEFS")
+  (:pathname-default "[ROBBINS.PERSONAL.BUILD.CODE]")
+  (:module defs ("STANDARD" "CSTANDARD"))
+  (:compile-load defs))
